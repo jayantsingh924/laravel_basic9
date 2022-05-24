@@ -13,6 +13,9 @@ Route::get('/dashboard', [AdminController::class, 'adminDashboard'])->middleware
 
 Route::controller(AdminController::class)->group(function () {
     Route::get('/logout', 'destroy')->name('admin.logout');
+    Route::get('register', [AdminController::class, 'create'])->name('register');
+
+Route::post('register', [AdminController::class, 'store']);
 });
 
 require __DIR__.'/auth.php';
