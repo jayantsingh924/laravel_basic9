@@ -20,4 +20,6 @@ Route::post('register', [AdminController::class, 'store']);
 
 require __DIR__.'/auth.php';
 
+// test jayant
+
 
